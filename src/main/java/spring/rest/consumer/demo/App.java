@@ -11,10 +11,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 
-// Steps - 
-// 1. Run spring-boot-project. 
-// 2. Run this project 
-// 3. test APIs of this project - http://localhost:8091/department/5 
+// write code to consume - 
+// 1. get emp by id 
+// 2. get all emps 
+// 3. get all deps 
+
 
 @SpringBootApplication
 public class App {
