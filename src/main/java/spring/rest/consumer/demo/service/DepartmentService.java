@@ -20,6 +20,7 @@ public class DepartmentService {
 
 	public Department getDepartmentById(int did) {
 		Department department = restTemplate.getForObject(URL + "/dept/get-dept-by-id/" + did, Department.class);
+//		restTemplate.
 		LOG.info(department.toString());
 		return department;
 	}

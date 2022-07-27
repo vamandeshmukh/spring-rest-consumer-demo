@@ -1,4 +1,4 @@
-package spring.rest.consumer.demo.service;
+package spring.rest.consumer.demo.controller;
 
 import java.util.List;
 
@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import spring.rest.consumer.demo.model.Employee;
+import spring.rest.consumer.demo.service.EmployeeService;
 
 @RestController
 @RequestMapping("/emp")
