@@ -12,9 +12,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 // write code to consume - 
-// 1. get emp by id 
-// 2. get all emps 
+// 1. get all emps 
+// 2. get emp by id 
 // 3. get all deps 
+// 4. get dep by id (already done)
 
 
 @SpringBootApplication
