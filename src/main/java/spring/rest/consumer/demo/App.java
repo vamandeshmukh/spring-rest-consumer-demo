@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * 
@@ -12,15 +13,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  *
  */
 
-// write code to consume - 
-// 1. get all emps 
-// 2. get emp by id 
-// 3. get all deps 
-// 4. get dep by id (already done)
-
-
 @SpringBootApplication
 @EnableFeignClients
+@EnableEurekaClient
 public class App {
 
 	private static final Logger log = LoggerFactory.getLogger(App.class);

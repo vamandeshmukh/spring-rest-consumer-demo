@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,8 +19,13 @@ public class DepartmentService {
 
 	private String URL = "http://localhost:9999";
 
+	private HttpHeaders headers = new HttpHeaders();
+
 	public Department getDepartmentById(int did) {
-		Department department = restTemplate.getForObject(URL + "/dept/get-dept-by-id/" + did, Department.class);
+		headers.add("Authorization", "Basic user:password");
+		Department department = restTemplate.getForObject(URL + "/dept/get-dept-by-id/" + did, Department.class,
+				headers);
+//		Department department = restTemplate.getForObjec
 //		restTemplate.
 		LOG.info(department.toString());
 		return department;
