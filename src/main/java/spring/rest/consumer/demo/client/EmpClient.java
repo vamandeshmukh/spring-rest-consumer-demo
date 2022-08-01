@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import spring.rest.consumer.demo.model.Employee;
 
-@FeignClient(value = "empClient", url = "http://localhost:9999/")
+@FeignClient(value = "empClient", url = "http://localhost:9999/", name = "empClient", configuration = FeignClientConfiguration.class)
 public interface EmpClient {
 
 	@RequestMapping(method = RequestMethod.GET, value = "/emp/get-all-emps", produces = "application/json")
